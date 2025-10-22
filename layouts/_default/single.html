@@ -1,0 +1,13 @@
+{{ define "title" }}{{ .Title }} — {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+  <article>
+    <h1>{{ .Title }}</h1>
+    <div class="card-meta" style="margin-bottom:12px;">
+      {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "02.01.2006" }}</time>{{ end }}
+      {{ with .Params.tags }}<span class="tags">{{ delimit . ", " }}</span>{{ end }}
+    </div>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

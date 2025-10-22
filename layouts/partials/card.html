@@ -1,0 +1,14 @@
+<article class="card">
+  <a class="card-link" href="{{ .RelPermalink }}">
+    <div class="card-body">
+      <h3 class="card-title">{{ .Title }}</h3>
+      {{ with .Params.description }}
+        <p class="card-desc">{{ . }}</p>
+      {{ end }}
+      <div class="card-meta">
+        {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "02.01.2006" }}</time>{{ end }}
+        {{ with .Params.tags }}<span class="tags">{{ delimit . ", " }}</span>{{ end }}
+      </div>
+    </div>
+  </a>
+</article>

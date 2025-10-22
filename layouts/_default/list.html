@@ -1,0 +1,11 @@
+{{ define "title" }}{{ .Title }} — {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <div class="cards-grid">
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range (.Paginate $pages).Pages }}
+      {{ partial "card.html" . }}
+    {{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+{{ end }}
