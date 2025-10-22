@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лайфхаки - AI Orbit</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html" class="logo-link">
+                    <h1>🛰 AI Orbit</h1>
+                    <p class="tagline">Внутренняя платформа компании Спутник для обмена знаниями по ИИ</p>
+                </a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../news/index.html">Новости</a></li>
+                    <li><a href="../training/index.html">Обучение</a></li>
+                    <li><a href="index.html" class="active">Лайфхаки</a></li>
+                    <li><a href="../projects/index.html">Проекты</a></li>
+                    <li><a href="../resources/index.html">Ресурсы</a></li>
+                    <li><a href="../about/index.html">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../index.html">Главная</a> / <span class="active">Лайфхаки</span>
+            </nav>
+            
+            <h2>Лайфхаки и советы по ИИ</h2>
+            
+            <div class="hacks-list">
+                <article class="hack-item">
+                    <div class="hack-meta">
+                        <span class="date">22.10.2025</span>
+                        <span class="category">ChatGPT</span>
+                    </div>
+                    <h3>Эффективные промпты для ChatGPT</h3>
+                    <p><strong>Проблема:</strong> ChatGPT дает слишком общие ответы</p>
+                    <p><strong>Решение:</strong> Используйте структуру "Роль + Контекст + Задача + Формат"</p>
+                    <div class="hack-example">
+                        <code>Ты эксперт по маркетингу. В контексте IT-компании создай email для клиентов о новом продукте. Формат: заголовок + 3 абзаца + призыв к действию.</code>
+                    </div>
+                </article>
+
+                <article class="hack-item">
+                    <div class="hack-meta">
+                        <span class="date">21.10.2025</span>
+                        <span class="category">Claude</span>
+                    </div>
+                    <h3>Анализ больших документов в Claude</h3>
+                    <p><strong>Проблема:</strong> Нужно проанализировать длинный PDF</p>
+                    <p><strong>Решение:</strong> Загружайте документ частями и просите создать краткое резюме каждой части, затем общий анализ</p>
+                    <div class="hack-example">
+                        <code>Проанализируй страницы 1-10 этого документа и создай краткое резюме ключевых моментов. Затем я загружу следующие страницы.</code>
+                    </div>
+                </article>
+
+                <article class="hack-item">
+                    <div class="hack-meta">
+                        <span class="date">20.10.2025</span>
+                        <span class="category">Midjourney</span>
+                    </div>
+                    <h3>Создание консистентных изображений</h3>
+                    <p><strong>Проблема:</strong> Изображения получаются разными по стилю</p>
+                    <p><strong>Решение:</strong> Используйте параметр --style и сохраняйте seed для похожих изображений</p>
+                    <div class="hack-example">
+                        <code>/imagine corporate presentation slide, modern design, --style raw --seed 12345</code>
+                    </div>
+                </article>
+
+                <article class="hack-item">
+                    <div class="hack-meta">
+                        <span class="date">19.10.2025</span>
+                        <span class="category">Общее</span>
+                    </div>
+                    <h3>Организация промптов в Notion</h3>
+                    <p><strong>Проблема:</strong> Промпты теряются и сложно найти нужный</p>
+                    <p><strong>Решение:</strong> Создайте базу данных промптов с тегами и примерами результатов</p>
+                    <div class="hack-example">
+                        <p>Структура: Название | Категория | Промпт | Пример результата | Рейтинг эффективности</p>
+                    </div>
+                </article>
+
+                <article class="hack-item">
+                    <div class="hack-meta">
+                        <span class="date">18.10.2025</span>
+                        <span class="category">GitHub Copilot</span>
+                    </div>
+                    <h3>Улучшение качества кода с Copilot</h3>
+                    <p><strong>Проблема:</strong> Copilot предлагает неоптимальный код</p>
+                    <p><strong>Решение:</strong> Пишите подробные комментарии о том, что должен делать код</p>
+                    <div class="hack-example">
+                        <code>// Функция для валидации email с проверкой домена и формата
+                        // Должна возвращать true для валидных email и false для невалидных
+                        // Обработать случаи: пустая строка, отсутствие @, некорректный домен</code>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Спутник, 2025. Проект AI Orbit — часть корпоративной программы внедрения искусственного интеллекта.</p>
+        </div>
+    </footer>
+</body>
+</html>
