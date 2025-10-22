@@ -100,6 +100,22 @@ git remote set-url origin git@github.com:mechboxtech/sputnikOrbit.git
 git push
 ```
 
+5) Постоянное использование локального ключа `deploy_key` для этого репозитория
+
+Чтобы всегда пушить по SSH с конкретным ключом (без доп. аргументов):
+
+```bash
+# положите приватный ключ рядом с репозиторием (например, ./deploy_key)
+# настройте ssh-команду для git в текущем репозитории
+git config core.sshCommand "ssh -i ./deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
+
+# (опционально) убедитесь, что remote использует SSH
+git remote set-url origin git@github.com:mechboxtech/sputnikOrbit.git
+
+# теперь обычные команды будут использовать этот ключ
+git add . && git commit -m "your message" && git push
+```
+
 Примечание: если пуш запрашивает логин/пароль, используйте GitHub username и
 Personal Access Token (вместо пароля), либо настройте SSH.
 
