@@ -3,26 +3,6 @@ name: Deploy Hugo to GitHub Pages
 on:
   push:
     branches: [ main ]
-    # Run only when relevant files change
-    paths:
-      - 'content/**'
-      - 'layouts/**'
-      - 'static/**'
-      - 'assets/**'
-      - '**/*.html'
-      - 'styles/**'
-      - 'config.*'
-      - 'hugo.toml'
-      - 'hugo.yaml'
-      - 'hugo.json'
-      - '.github/workflows/deploy.yml'
-    tags:
-      - 'v*'
-  pull_request:
-    branches: [ main ]
-  schedule:
-    # Weekly publish to refresh Pages caches
-    - cron: '0 7 * * 1'
   workflow_dispatch:
 
 permissions:
