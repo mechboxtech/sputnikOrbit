@@ -1,0 +1,17 @@
+# Security: never commit private keys or tokens
+deploy_key
+deploy_key.pub
+*.pem
+*.key
+*.ppk
+id_ed25519
+id_ed25519.pub
+id_rsa
+id_rsa.pub
+
+# OS / editor junk
+.DS_Store
+.idea/
+.vscode/
+
+
