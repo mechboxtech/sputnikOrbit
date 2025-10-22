@@ -116,6 +116,13 @@ git remote set-url origin git@github.com:mechboxtech/sputnikOrbit.git
 git add . && git commit -m "your message" && git push
 ```
 
+Если в некоторых окружениях появляется предупреждение про `known_hosts`, можно
+подавить его для текущего репозитория:
+
+```bash
+git config core.sshCommand "ssh -i ./deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+```
+
 Примечание: если пуш запрашивает логин/пароль, используйте GitHub username и
 Personal Access Token (вместо пароля), либо настройте SSH.
 
